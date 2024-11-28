@@ -9,6 +9,7 @@ import userRoutes from './Routes/user.routes.js'
 import authRoutes from './Routes/auth.routes.js'
 import recipeRoutes from './Routes/recipe.routes.js'
 import contactRoutes from './Routes/contact.routes.js'
+import path from 'path';
 
     const app = express()
     const CURRENT_WORKING_DIR = process.cwd();

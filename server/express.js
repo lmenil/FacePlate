@@ -9,9 +9,11 @@ import userRoutes from './Routes/user.routes.js'
 import authRoutes from './Routes/auth.routes.js'
 import recipeRoutes from './Routes/recipe.routes.js'
 import contactRoutes from './Routes/contact.routes.js'
+import path from 'path';
 
     const app = express()
-
+    const CURRENT_WORKING_DIR = process.cwd();
+    app.use(express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
    app.use(express.json());
    app.use(express.urlencoded({ extended: true }));
    app.use('/', userRoutes)
@@ -23,7 +25,18 @@ import contactRoutes from './Routes/contact.routes.js'
    app.use(cookieParser())
    app.use(compress())
    app.use(helmet())
-   app.use(cors())
+   // Configure and apply CORS
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || 'https://faceplat.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
+
+// Enable pre-flight requests for all routes
+app.options('*', cors(corsOptions))
    app.get('/', (req, res) => {
     res.status(200).send(Template()) 
     })  

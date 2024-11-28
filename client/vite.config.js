@@ -11,12 +11,12 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': {
-                target: process.env.VITE_API_URL || 'https://faceplate-server.onrender.com',
+                target: 'https://faceplate-server.onrender.com',
                 changeOrigin: true,
                 secure: false,
             },
             '/auth': {
-                target: process.env.VITE_API_URL || 'https://faceplate-server.onrender.com',
+                target: 'https://faceplate-server.onrender.com',
                 changeOrigin: true,
                 secure: false,
             },

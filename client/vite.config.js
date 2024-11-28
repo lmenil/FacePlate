@@ -22,7 +22,7 @@ export default defineConfig({
     },
     build: {
         outDir: 'dist',
-    assetsDir: './src/assets',
+    assetsDir: '/src/assets',
     emptyOutDir: true,
         },
 });

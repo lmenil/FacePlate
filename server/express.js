@@ -27,7 +27,7 @@ import path from 'path';
    app.use(helmet())
    // Configure and apply CORS
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'https://your-frontend-url.onrender.com',
+  origin: process.env.FRONTEND_URL || 'https://faceplat.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,

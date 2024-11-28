@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { API_URL } from './src/config'
+import * as dotenv from 'dotenv';
+dotenv.config({path: '../server/.env'}); 
 
 //const { PORT = 3000 } = process.env;
 

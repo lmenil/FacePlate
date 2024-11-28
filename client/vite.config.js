@@ -13,7 +13,7 @@ export default defineConfig({
                 changeOrigin: true,
             },
             '/auth': {
-                target: `${API_URL}`,
+                target: API_URL,
                 changeOrigin: true,
             },
         },

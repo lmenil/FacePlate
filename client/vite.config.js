@@ -9,12 +9,14 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': {
-                target: `${API_URL}`,
+                target: process.env.VITE_API_URL || 'https://your-backend-service.onrender.com',
                 changeOrigin: true,
+                secure: false,
             },
             '/auth': {
-                target: API_URL,
+                target: process.env.VITE_API_URL || 'https://your-backend-service.onrender.com',
                 changeOrigin: true,
+                secure: false,
             },
         },
     },

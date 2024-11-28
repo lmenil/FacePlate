@@ -25,7 +25,18 @@ import path from 'path';
    app.use(cookieParser())
    app.use(compress())
    app.use(helmet())
-   app.use(cors())
+   // Configure and apply CORS
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || 'https://your-frontend-url.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
+
+// Enable pre-flight requests for all routes
+app.options('*', cors(corsOptions))
    app.get('/', (req, res) => {
     res.status(200).send(Template()) 
     })  

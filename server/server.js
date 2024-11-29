@@ -6,7 +6,7 @@ import cors from 'cors'
 const port = process.env.PORT || 3000;
 
 	mongoose.Promise = global.Promise
-	mongoose.connect(config.mongoUri, { useNewUrlParser: true,
+	mongoose.connect(config.mongoUri, { 
   } 
   )
   .then(() => {

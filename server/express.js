@@ -26,17 +26,18 @@ import path from 'path';
    app.use(compress())
    app.use(helmet())
    // Configure and apply CORS
-const corsOptions = {
-  origin: 'https://faceplate.onrender.com',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-  optionsSuccessStatus: 200
-}
-app.use(cors(corsOptions))
+// const corsOptions = {
+//   origin: 'https://faceplate.onrender.com',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   credentials: true,
+//   optionsSuccessStatus: 200
+// }
+// app.use(cors(corsOptions))
 
-// Enable pre-flight requests for all routes
-app.options('*', cors(corsOptions))
+// // Enable pre-flight requests for all routes
+// app.options('*', cors(corsOptions))
+   app.use(cors())
    app.get('/', (req, res) => {
     res.status(200).send(Template()) 
     })  

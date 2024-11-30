@@ -5,6 +5,7 @@ import communityMeal from "../src/assets/communityMeal.png";
 import cookingTogether from "../src/assets/cookingTogether.png";
 import familyCookingTogether from "../src/assets/familyCookingTogether.png";
 import logo from "../src/assets/FreshPlate-logo.png"; // Import FreshPlate logo
+import aboutAngelo from "../public/images/Aboutus-Angelo.jpg"
 
 export default function AboutPage() {
   return (
@@ -178,7 +179,7 @@ export default function AboutPage() {
               {
                 name: "Angelo Tiquio",
                 role: "Lead Frontend Developer",
-                image: "AboutUs-Angelo.jpg",
+                image: {aboutAngelo},
               },
               {
                 name: "Lorenzo Menil",
@@ -209,7 +210,7 @@ export default function AboutPage() {
                     }}
                   >
                     <img
-                      src={`../public/images/${member.image}`}
+                      src={`${member.image}`}
                       alt={`${member.name}`}
                       style={{
                         width: "100%",

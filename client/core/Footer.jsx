@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Container, Box } from "@mui/material";
-import teamLogo from '../src/assets/teamLogo.png';
+import teamLogo from '../../assets/teamLogo.png';
 
 export default function Footer() {
   return (

@@ -32,7 +32,7 @@ export default function Footer() {
             This Website is Designed by{" "}
             <img
               style={{ height: 70, width: "auto", verticalAlign: "middle" }}
-              src={teamLogo}
+              src='../src/assets/teamLogo.png'
               alt="Pseudo Squad Logo"
             />
           </Typography>

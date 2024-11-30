@@ -37,7 +37,13 @@ import path from 'path';
 
 // // Enable pre-flight requests for all routes
 // app.options('*', cors(corsOptions))
-   app.use(cors())
+   app.use(cors({
+  origin: 'https://faceplate.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  optionsSuccessStatus: 204
+}));
    app.get('/', (req, res) => {
     res.status(200).send(Template()) 
     })  

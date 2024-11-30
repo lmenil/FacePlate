@@ -10,6 +10,7 @@ import authRoutes from './Routes/auth.routes.js'
 import recipeRoutes from './Routes/recipe.routes.js'
 import contactRoutes from './Routes/contact.routes.js'
 import path from 'path';
+import {API_URL} from '../client/src/config';
 
     const app = express()
     const CURRENT_WORKING_DIR = process.cwd();
@@ -38,7 +39,7 @@ import path from 'path';
 // // Enable pre-flight requests for all routes
 // app.options('*', cors(corsOptions))
    app.use(cors({
-  origin: 'https://faceplate.onrender.com',
+  origin: API_URL,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,

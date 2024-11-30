@@ -39,7 +39,7 @@ import {API_URL} from '../client/src/config.js';
 // // Enable pre-flight requests for all routes
 // app.options('*', cors(corsOptions))
    app.use(cors({
-  origin: API_URL,
+  origin: `${API_URL}`,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,

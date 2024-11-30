@@ -5,10 +5,10 @@ import communityMeal from "../src/assets/communityMeal.png";
 import cookingTogether from "../src/assets/cookingTogether.png";
 import familyCookingTogether from "../src/assets/familyCookingTogether.png";
 import logo from "../src/assets/FreshPlate-logo.png"; // Import FreshPlate logo
-import aboutAngelo from "../assets/team/Aboutus-Angelo.jpg";
-import aboutLorenzo from "../assets/team/Aboutus-Lorenzo.jpg";
-import aboutBianca from "../assets/team/Aboutus-Bianca.jpeg";
-import aboutOvo from "../assets/team/Aboutus-Ovo.jpeg";
+import aboutAngelo from "../public/images/Aboutus-Angelo.jpg";
+import aboutLorenzo from "../public/images/Aboutus-Lorenzo.jpg";
+import aboutBianca from "../public/images/Aboutus-Bianca.jpeg";
+import aboutOvo from "../public/images/Aboutus-Ovo.jpeg";
 
 export default function AboutPage() {
   return (

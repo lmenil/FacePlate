@@ -10,7 +10,7 @@ import authRoutes from './Routes/auth.routes.js'
 import recipeRoutes from './Routes/recipe.routes.js'
 import contactRoutes from './Routes/contact.routes.js'
 import path from 'path';
-import {API_URL} from '../client/src/config';
+import {API_URL} from '../client/src/config.js';
 
     const app = express()
     const CURRENT_WORKING_DIR = process.cwd();

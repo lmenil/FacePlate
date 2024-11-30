@@ -26,7 +26,8 @@ const list = async (credentials) => {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + credentials.t
-      }
+      },
+      credentials: 'include'
     });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

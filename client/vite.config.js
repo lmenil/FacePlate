@@ -7,6 +7,11 @@ import {API_URL} from '../client/src/config'
 
 export default defineConfig({
     plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
     server: {
         proxy: {
             '/api': {
@@ -22,8 +27,12 @@ export default defineConfig({
         },
     },
     build: {
-        outDir: 'dist',
+    outDir: 'dist',
     assetsDir: 'assets',
-    emptyOutDir: true,
-        },
-});
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
+  },
+})

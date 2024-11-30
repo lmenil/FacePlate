@@ -178,22 +178,22 @@ export default function AboutPage() {
               {
                 name: "Angelo Tiquio",
                 role: "Lead Frontend Developer",
-                image: "AboutUs-Angelo.jpg",
+                image: "./images/AboutUs-Angelo.jpg",
               },
               {
                 name: "Lorenzo Menil",
                 role: "Lead Backend Developer",
-                image: "Aboutus-Lorenzo.jpg",
+                image: "/images/Aboutus-Lorenzo.jpg",
               },
               {
                 name: "Bianca Salunga",
                 role: "QA/UI Designer",
-                image: "Aboutus-Bianca.jpeg",
+                image: "/images/Aboutus-Bianca.jpeg",
               },
               {
                 name: "Ovovwero Unuavwodo",
                 role: "Frontend Developer",
-                image: "Aboutus-Ovo.jpeg",
+                image: "/images/Aboutus-Ovo.jpeg",
               },
             ].map((member, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>

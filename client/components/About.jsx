@@ -5,6 +5,10 @@ import communityMeal from "../src/assets/communityMeal.png";
 import cookingTogether from "../src/assets/cookingTogether.png";
 import familyCookingTogether from "../src/assets/familyCookingTogether.png";
 import logo from "../src/assets/FreshPlate-logo.png"; // Import FreshPlate logo
+import aboutAngelo from "../public/images/Aboutus-Angelo.jpg";
+import aboutBianca from "../public/images/Aboutus-Bianca.jpg";
+import aboutOvo from "../public/images/Aboutus-Ovo.jpg";
+import aboutLorenzo from "../public/images/Aboutus-Lorenzo.jpg";
 
 export default function AboutPage() {
   return (
@@ -178,22 +182,22 @@ export default function AboutPage() {
               {
                 name: "Angelo Tiquio",
                 role: "Lead Frontend Developer",
-                image: "./images/AboutUs-Angelo.jpg",
+                image: {aboutAngelo},
               },
               {
                 name: "Lorenzo Menil",
                 role: "Lead Backend Developer",
-                image: "/images/Aboutus-Lorenzo.jpg",
+                image: {aboutLorenzo},
               },
               {
                 name: "Bianca Salunga",
                 role: "QA/UI Designer",
-                image: "/images/Aboutus-Bianca.jpeg",
+                image: {aboutBianca},
               },
               {
                 name: "Ovovwero Unuavwodo",
                 role: "Frontend Developer",
-                image: "/images/Aboutus-Ovo.jpeg",
+                image: {aboutOvo},
               },
             ].map((member, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>

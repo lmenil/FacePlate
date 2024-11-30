@@ -11,7 +11,7 @@ import {
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { signin } from "./api-auth.js";
 import auth from "./auth-helper";
-import loginsignup from '../public/images/login-signup.jpg'
+import loginsignup from '../public/images/login-signup.jpeg'
 
 const useStyles = {
   card: {

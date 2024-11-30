@@ -6,8 +6,8 @@ import cookingTogether from "../src/assets/cookingTogether.png";
 import familyCookingTogether from "../src/assets/familyCookingTogether.png";
 import logo from "../src/assets/FreshPlate-logo.png"; // Import FreshPlate logo
 import aboutAngelo from "../public/images/Aboutus-Angelo.jpg";
-import aboutBianca from "../public/images/Aboutus-Bianca.jpg";
-import aboutOvo from "../public/images/Aboutus-Ovo.jpg";
+import aboutBianca from "../public/images/Aboutus-Bianca.jpeg";
+import aboutOvo from "../public/images/Aboutus-Ovo.jpeg";
 import aboutLorenzo from "../public/images/Aboutus-Lorenzo.jpg";
 
 export default function AboutPage() {

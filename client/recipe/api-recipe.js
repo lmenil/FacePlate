@@ -2,7 +2,7 @@
 
 const create = async (credentials, recipe) => {
   try {
-    let response = await fetch(`"https://faceplate-server.onrender.com/api/recipes/`, {
+    let response = await fetch(`https://faceplate-server.onrender.com/api/recipes/`, {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer ' + credentials.t
@@ -20,7 +20,7 @@ const create = async (credentials, recipe) => {
 
 const list = async (credentials) => {
   try {
-    let response = await fetch(`"https://faceplate-server.onrender.com/api/recipes/`, {
+    let response = await fetch(`https://faceplate-server.onrender.com/api/recipes/`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -40,7 +40,7 @@ const list = async (credentials) => {
 
 const read = async (params, credentials) => {
   try {
-    let response = await fetch(`"https://faceplate-server.onrender.com/api/recipes/` + params.recipeId, {
+    let response = await fetch(`https://faceplate-server.onrender.com/api/recipes/` + params.recipeId, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -56,7 +56,7 @@ const read = async (params, credentials) => {
 
 const update = async (params, credentials, recipe) => {
   try {
-    let response = await fetch(`"https://faceplate-server.onrender.com/api/recipes/` + params.recipeId, {
+    let response = await fetch(`https://faceplate-server.onrender.com/api/recipes/` + params.recipeId, {
       method: 'PUT',
       headers: {
         'Accept': 'application/json',
@@ -73,7 +73,7 @@ const update = async (params, credentials, recipe) => {
 
 const remove = async (params, credentials) => {
   try {
-    let response = await fetch(`"https://faceplate-server.onrender.com/api/recipes/` + params.recipeId, {
+    let response = await fetch(`https://faceplate-server.onrender.com/api/recipes/` + params.recipeId, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',

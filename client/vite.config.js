@@ -10,12 +10,12 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': {
-                target: `${API_URL}`,
+                target: 'https://faceplate-server.onrender.com',
                 changeOrigin: true,
                 secure: false,
             },
             '/auth': {
-                target: `${API_URL}`,
+                target: 'https://faceplate-server.onrender.com',
                 changeOrigin: true,
                 secure: false,
             },

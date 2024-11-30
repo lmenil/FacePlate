@@ -8,6 +8,7 @@ const create = async (user) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
+            credentials: 'include',
             body: JSON.stringify(user)
         })
         return await response.json()
@@ -35,7 +36,8 @@ const read = async (params, credentials, signal) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + credentials.t
-            }
+            },
+            credentials: 'include',
         })
         return await response.json()
     } catch (err) {
@@ -51,6 +53,7 @@ const update = async (params, credentials, user) => {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + credentials.t
             },
+            credentials: 'include',
             body: JSON.stringify(user)
         })
         return await response.json()
@@ -66,7 +69,8 @@ const remove = async (params, credentials) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + credentials.t
-            }
+            },
+            credentials: 'include',
         })
         return await response.json()
     } catch (err) {

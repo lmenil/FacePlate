@@ -5,10 +5,6 @@ import communityMeal from "../src/assets/communityMeal.png";
 import cookingTogether from "../src/assets/cookingTogether.png";
 import familyCookingTogether from "../src/assets/familyCookingTogether.png";
 import logo from "../src/assets/FreshPlate-logo.png"; // Import FreshPlate logo
-import aboutAngelo from "../public/images/Aboutus-Angelo.jpg";
-import aboutBianca from "../public/images/Aboutus-Bianca.jpeg";
-import aboutOvo from "../public/images/Aboutus-Ovo.jpeg";
-import aboutLorenzo from "../public/images/Aboutus-Lorenzo.jpg";
 
 export default function AboutPage() {
   return (
@@ -182,22 +178,22 @@ export default function AboutPage() {
               {
                 name: "Angelo Tiquio",
                 role: "Lead Frontend Developer",
-                image: {aboutAngelo},
+                image: "AboutUs-Angelo.jpg",
               },
               {
                 name: "Lorenzo Menil",
                 role: "Lead Backend Developer",
-                image: {aboutLorenzo},
+                image: "Aboutus-Lorenzo.jpg",
               },
               {
                 name: "Bianca Salunga",
                 role: "QA/UI Designer",
-                image: {aboutBianca},
+                image: "Aboutus-Bianca.jpeg",
               },
               {
                 name: "Ovovwero Unuavwodo",
                 role: "Frontend Developer",
-                image: {aboutOvo},
+                image: "Aboutus-Ovo.jpeg",
               },
             ].map((member, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
@@ -213,7 +209,7 @@ export default function AboutPage() {
                     }}
                   >
                     <img
-                      src={`../src/assets/${member.image}`}
+                      src={`../public/images/${member.image}`}
                       alt={`${member.name}`}
                       style={{
                         width: "100%",

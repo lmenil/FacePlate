@@ -356,7 +356,7 @@ const ContactUsPage = () => {
     if (validateForm()) {
       setIsSubmitting(true);
       try {
-        const response = await fetch('https://faceplate-server.onreader.com/api/contacts', {
+        const response = await fetch('https://faceplate-server.onrender.com/api/contacts', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

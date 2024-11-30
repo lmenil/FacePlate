@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Container, Box } from "@mui/material";
+import teamLogo from '../src/assets/teamLogo.png';
 
 export default function Footer() {
   return (
@@ -31,7 +32,7 @@ export default function Footer() {
             This Website is Designed by{" "}
             <img
               style={{ height: 70, width: "auto", verticalAlign: "middle" }}
-              src="../src/assets/teamlogo.png"
+              src={teamLogo}
               alt="Pseudo Squad Logo"
             />
           </Typography>

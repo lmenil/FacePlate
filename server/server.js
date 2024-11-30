@@ -24,13 +24,13 @@ res.json({ message: "Welcome to User application." });
 // app.options('*', cors());
 
 // // Add a catch-all route for CORS preflight
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', 'https://faceplate.onrender.com');
-//   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-//   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//   res.header('Access-Control-Allow-Credentials', true);
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://faceplate.onrender.com');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
 app.listen(config.port, (err) => { 
 if (err) {
 console.log(err) 

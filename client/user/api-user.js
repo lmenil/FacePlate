@@ -2,7 +2,7 @@
 
 const create = async (user) => {
     try {
-        let response = await fetch('/api/users/', {
+        let response = await fetch('"https://faceplate-server.onrender.com/api/users/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -17,7 +17,7 @@ const create = async (user) => {
 }
 const list = async (signal) => {
     try {
-        let response = await fetch('/api/users/', {
+        let response = await fetch('"https://faceplate-server.onrender.com/api/users/', {
             method: 'GET',
             signal: signal,
         })
@@ -28,7 +28,7 @@ const list = async (signal) => {
 }
 const read = async (params, credentials, signal) => {
     try {
-        let response = await fetch('/api/users/' + params.userId, {
+        let response = await fetch('"https://faceplate-server.onrender.com/api/users/' + params.userId, {
             method: 'GET',
             signal: signal,
             headers: {
@@ -44,7 +44,7 @@ const read = async (params, credentials, signal) => {
 }
 const update = async (params, credentials, user) => {
     try {
-        let response = await fetch('/api/users/' + params.userId, {
+        let response = await fetch('"https://faceplate-server.onrender.com/api/users/' + params.userId, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -60,7 +60,7 @@ const update = async (params, credentials, user) => {
 }
 const remove = async (params, credentials) => {
     try {
-        let response = await fetch('/api/users/' + params.userId, {
+        let response = await fetch('"https://faceplate-server.onrender.com/api/users/' + params.userId, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',

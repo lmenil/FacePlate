@@ -6,7 +6,7 @@ import {API_URL} from  '../../client/src/config.js'
 const router = express.Router()
 
 const corsOptions = {
-  origin: 'https://faceplate-server.onrender.com',
+  origin: `${API_URL}`,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,

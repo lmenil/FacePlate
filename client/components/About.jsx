@@ -179,7 +179,7 @@ export default function AboutPage() {
               {
                 name: "Angelo Tiquio",
                 role: "Lead Frontend Developer",
-                image: {aboutAngelo},
+                image: '../public/images/Aboutus-Angelo.jpg',
               },
               {
                 name: "Lorenzo Menil",

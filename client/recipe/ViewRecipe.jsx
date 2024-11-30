@@ -450,7 +450,7 @@ const getImageUrl = useCallback((recipeData) => {
         throw new Error("User not authenticated");
       }
 
-      const response = await fetch(`/api/recipes/${recipeId}`, {
+      const response = await fetch(`https://faceplate-server.onrender.com/api/recipes/${recipeId}`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json',

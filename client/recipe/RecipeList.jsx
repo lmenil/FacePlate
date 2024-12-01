@@ -95,14 +95,13 @@ export default function RecipeList() {
       if (!jwt) {
         throw new Error("User not authenticated");
       }
-      const response = await fetch(`https://faceplate-server.onrender.com/api/recipes`, {
+      const response = await fetch("/api/recipes", {
         method: "GET",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
           Authorization: "Bearer " + jwt.token,
         },
-        credentials:'include'
       });
 
       if (!response.ok) {

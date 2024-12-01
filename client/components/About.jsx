@@ -5,10 +5,10 @@ import communityMeal from "../src/assets/communityMeal.png";
 import cookingTogether from "../src/assets/cookingTogether.png";
 import familyCookingTogether from "../src/assets/familyCookingTogether.png";
 import logo from "../src/assets/FreshPlate-logo.png"; // Import FreshPlate logo
-import aboutAngelo from "../public/images/Aboutus-Angelo.jpg";
-import aboutLorenzo from "../public/images/Aboutus-Lorenzo.jpg";
-import aboutBianca from "../public/images/Aboutus-Bianca.jpeg";
-import aboutOvo from "../public/images/Aboutus-Ovo.jpeg";
+import aboutAngelo from "../src/assets/Aboutus-Angelo.jpg";
+import aboutLorenzo from "../src/assets/Aboutus-Lorenzo.jpg";
+import aboutBianca from "../src/assets/Aboutus-Bianca.jpeg";
+import aboutOvo from "../src/assets/Aboutus-Ovo.jpeg";
 
 export default function AboutPage() {
   return (
@@ -185,7 +185,7 @@ export default function AboutPage() {
                 image: aboutAngelo,
               },
               {
-                name: "Lorenzo Menil",
+                name: "Lorenzo Menil Jr.",
                 role: "Lead Backend Developer",
                 image: aboutLorenzo,
               },

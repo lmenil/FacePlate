@@ -1,8 +1,6 @@
-import { API_URL } from '../src/config';
-
 const signin = async (user) => {
     try {
-        let response = await fetch("https://faceplate-server.onrender.com/auth/signin/", {
+        let response = await fetch('/auth/signin/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -18,7 +16,7 @@ const signin = async (user) => {
 }
 const signout = async () => {
     try {
-        let response = await fetch("https://faceplate-server.onrender.com/auth/signout/", { method: 'GET' })
+        let response = await fetch('/auth/signout/', { method: 'GET' })
         return await response.json()
     } catch (err) {
         console.log(err)

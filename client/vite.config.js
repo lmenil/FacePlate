@@ -1,39 +1,41 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import {API_URL} from '../client/src/config'
 import path from 'path'
 
-
-//const { PORT = 3000 } = process.env;
+const { PORT = 3000 } = process.env;
 
 export default defineConfig({
     plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
     server: {
         proxy: {
             '/api': {
-                target: `${API_URL}`,
+                target: `http://localhost:${PORT}`,
                 changeOrigin: true,
-                secure: false,
             },
             '/auth': {
-                target: `${API_URL}`,
+                target: `http://localhost:${PORT}`,
                 changeOrigin: true,
-                secure: false,
             },
         },
     },
     build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
+        outDir: 'dist/app',
+        assetsDir: 'assets',
+        chunkSizeWarningLimit: 1000, // Increase the warning limit to 1000 kB
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              vendor: ['react', 'react-dom', 'react-router-dom'],
+              // Add other large dependencies here
+            },
+            assetFileNames: (assetInfo) => {
+              let extType = assetInfo.name.split('.').at(1);
+              if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+                extType = 'img';
+              }
+              return `assets/${extType}/[name]-[hash][extname]`;
+            },
+          },
+        },
       },
-    },
-  },
-})
+    })

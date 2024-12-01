@@ -12,5 +12,4 @@ const config = {
     '/mernproject' 
     }
     export default config
-    export const API = 'https://faceplate-server.onrender.com'
    

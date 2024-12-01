@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState }  from "react";
 import { Typography, Container, Box } from "@mui/material";
-import teamLogo from '../public/images/teamlogo.png';
+import teamlogo from '../src/assets/teamlogo.png';
+
 
 export default function Footer() {
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageError = () => {
+    console.error("Failed to load teamlogo.png");
+    setImageError(true);
+  };
   return (
     <Box
       component="footer"
@@ -30,11 +37,16 @@ export default function Footer() {
             style={{ textAlign: "center" }}
           >
             This Website is Designed by{" "}
-            <img
-              style={{ height: 70, width: "auto", verticalAlign: "middle" }}
-              src={teamLogo}
-              alt="Pseudo Squad Logo"
-            />
+            {!imageError ? (
+              <img
+                style={{ height: 70, width: "auto", verticalAlign: "middle" }}
+                src={teamlogo}
+                alt="Pseudo Squad Logo"
+                onError={handleImageError}
+              />
+            ) : (
+              <span>Pseudo Squad (Image not available)</span>
+            )}
           </Typography>
         </Box>
       </Container>
